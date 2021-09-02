@@ -70,12 +70,12 @@ end
 ### 类只读属性
 * `cls.__super`指向父类
 * `cls.__rawstr`获取类字符串（例如`class: 000001F60796BA10`）
-* `cls:isinstanceof(cls)`判断是否为参数的子类
+* `cls:instanceof(cls)`判断是否为参数的子类
 
 ### 对象只读属性
 * `obj.__cls`指向类
 * `obj.__rawstr`获取对象字符串（例如`object: 000001F60796BA10`）
-* `obj:isinstanceof(cls)`判断是否为类的实例
+* `obj:instanceof(cls)`判断是否为类的实例
 
 ### 重载运算符
 
