@@ -1,5 +1,9 @@
 
-local function instanceof (self, cls)
+function instanceof (self, cls)
+    if (type(self) ~= "table") then
+        return false
+    end
+
     if self.__cls then
         return self.__cls:instanceof(cls)
     end
@@ -77,7 +81,7 @@ function Class (BaseClass)
                         return objstr
                     end
 
-                    if key == "isinstanceof" then
+                    if key == "instanceof" then
                         return instanceof
                     end
 
